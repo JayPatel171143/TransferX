@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - TransferX</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#000000',
+                        // Custom Mint Palette
+                        mint: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        secondary: '#2dd4bf', // Mint-400
+                        // Dark Mode Palette
+                        slate: {
+                            850: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="font-sans antialiased bg-gradient-to-br from-mint-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 min-h-screen flex flex-col transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20 lg:h-24">
+                <!-- Logo -->
+                <a href="index.html"
+                    class="flex items-center gap-2 text-xl lg:text-2xl font-black text-black dark:text-white hover:text-mint-600 dark:hover:text-mint-400 transition-colors">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                    Transfer<span class="text-mint-500">X</span>
+                </a>
+
+                <div class="flex items-center gap-6">
+                    <a href="index.html"
+                        class="text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors">Back
+                        to Home</a>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="themeToggle"
+                        class="relative w-14 h-7 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+                        aria-label="Toggle Dark Mode">
+
+                        <!-- Sliding Circle -->
+                        <span id="themeCircle"
+                            class="absolute left-1 w-5 h-5 rounded-full bg-white dark:bg-slate-900 shadow-md transform transition-transform duration-300 translate-x-0 dark:translate-x-7 flex items-center justify-center">
+
+                            <!-- Sun Icon (Light Mode) -->
+                            <svg id="sunIcon" class="w-3 h-3 text-orange-500 dark:hidden" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+
+                            <!-- Moon Icon (Dark Mode) -->
+                            <svg id="moonIcon" class="w-3 h-3 text-mint-400 hidden dark:block" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-4xl mx-auto px-6 py-12 lg:py-20">
+        <h1 class="text-4xl lg:text-5xl font-black mb-4 text-slate-900 dark:text-white transition-colors">Terms of
+            Service</h1>
+        <p class="text-slate-500 dark:text-slate-400 mb-12 transition-colors">Last updated: January 2026</p>
+
+        <div class="space-y-12 text-lg text-slate-700 dark:text-slate-300 leading-relaxed transition-colors">
+            <section>
+                <h3 class="text-2xl font-bold text-black dark:text-white mb-4 transition-colors">1. Acceptance of Terms
+                </h3>
+                <p>By using TransferX, you agree to these Terms. If you do not agree, please do not use our service.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-black dark:text-white mb-4 transition-colors">2. Allowed Use</h3>
+                <p class="mb-4">You agree to use TransferX only for lawful purposes. You must NOT upload:</p>
+                <ul class="list-disc pl-6 space-y-2 marker:text-mint-500">
+                    <li>Illegal content (e.g., copyright infringement, malware, illegal pornography).</li>
+                    <li>Content that promotes violence or hate speech.</li>
+                    <li>Files larger than 50MB.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-black dark:text-white mb-4 transition-colors">3. Service Availability
+                </h3>
+                <p>We strive for high availability but do not guarantee 100% uptime. We reserve the right to modify or
+                    discontinue the service at any time.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-black dark:text-white mb-4 transition-colors">4. Limitation of
+                    Liability</h3>
+                <p>TransferX is provided "as is." We are not liable for any data loss, including files deleted after the
+                    3-hour retention period.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-black dark:text-white mb-4 transition-colors">5. Contact</h3>
+                <p>For violations or concerns, email: <a href="mailto:twincore2017@gmail.com"
+                        class="text-mint-600 dark:text-mint-400 hover:underline font-bold transition-colors">twincore2017@gmail.com</a>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="mt-auto border-t border-black/5 dark:border-white/10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-xl transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 text-lg font-black text-black dark:text-white transition-colors">
+                    <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        Transfer<span class="text-mint-500">X</span>
+                    </a>
+                </div>
+
+                <!-- Links & Credits -->
+                <div
+                    class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+                    <div class="flex gap-6">
+                        <a href="privacy.html"
+                            class="hover:text-black dark:hover:text-white transition-colors">Privacy</a>
+                        <a href="terms.html" class="hover:text-black dark:hover:text-white transition-colors">Terms</a>
+                    </div>
+                    <span class="hidden md:inline w-px h-4 bg-slate-300 dark:bg-slate-700"></span>
+                    <span class="flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity">
+                        Made with <span class="text-red-500 animate-pulse">❤️</span> by <span
+                            class="text-slate-900 dark:text-white font-bold">Twincore</span> © 2026
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+
+        // Check local storage or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle Function
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+    </script>
+</body>
+
+</html>

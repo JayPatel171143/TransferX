@@ -1,0 +1,160 @@
+/* 
+  TransferX - Minimal Custom CSS
+  Only for animations and complex elements not easily handled by Tailwind utilities.
+*/
+
+/* Smooth Fade In Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bounce In Animation for Success Icon */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Floating Animation for Hero Card */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Circular Progress Ring */
+.progress-ring-circle {
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+}
+
+
+
+/* Upload State Transitions */
+.upload-state {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.upload-state.active {
+    display: block;
+    opacity: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Focus Indicators for Accessibility */
+[role="button"]:focus,
+button:focus,
+input:focus,
+select:focus {
+    outline: 2px solid #2dd4bf;
+    outline-offset: 2px;
+}
+
+/* Improved Drag Active State */
+.drag-active {
+    border-color: #2dd4bf !important;
+    background-color: rgba(45, 212, 191, 0.05) !important;
+    transform: scale(1.02);
+}
+
+/* Circular Grid Effect for Mode Toggle */
+#modeIndicator {
+    border-radius: 9999px !important;
+}
+
+#modeSendBtn,
+#modeReceiveBtn {
+    border-radius: 9999px !important;
+    position: relative;
+}
+
+/* Circular Grid Border Effect */
+#modeSendBtn::before,
+#modeReceiveBtn::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    padding: 2px;
+    background: conic-gradient(from 0deg,
+            transparent 0deg,
+            transparent 45deg,
+            rgba(45, 212, 191, 0.1) 45deg,
+            rgba(45, 212, 191, 0.1) 90deg,
+            transparent 90deg,
+            transparent 135deg,
+            rgba(45, 212, 191, 0.1) 135deg,
+            rgba(45, 212, 191, 0.1) 180deg,
+            transparent 180deg,
+            transparent 225deg,
+            rgba(45, 212, 191, 0.1) 225deg,
+            rgba(45, 212, 191, 0.1) 270deg,
+            transparent 270deg,
+            transparent 315deg,
+            rgba(45, 212, 191, 0.1) 315deg,
+            rgba(45, 212, 191, 0.1) 360deg);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#modeSendBtn.active::before,
+#modeReceiveBtn.active::before {
+    opacity: 1;
+}
