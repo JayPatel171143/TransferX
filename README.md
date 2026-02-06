@@ -1,32 +1,54 @@
-# TransferX - Instant File Sharing
+# TransferX
 
-A beautiful, secure file sharing application with end-to-end functionality.
+TransferX is a simple file sharing web application built to understand how file storage, databases, and deployment work together in a real project.
+
+Users can upload files, get a shareable link, and the file automatically expires after a certain time.
+
+---
+
+## Live Demo
+🔗 https://transferx2018.netlify.app/
+
+---
 
 ## Features
-- 🚀 Instant file uploads
-- 🔒 Secure transfers via Supabase
-- 📱 Mobile-friendly responsive design
-- 🎨 Premium glass UI with 3D effects
-- 🌓 Dark/Light mode toggle
-- ⏰ Auto-delete files after 3 hours
+- File upload using Supabase Storage
+- Shareable download links
+- Auto file expiration
+- Clean and simple UI
+- Database-level security using Supabase RLS
+- Deployed and working live
+
+---
 
 ## Tech Stack
-- **Frontend**: HTML, CSS, JavaScript
-- **Storage**: Supabase
-- **Design**: Glassmorphism with 3D tilt effects
-- **Icons**: Feather Icons
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js
+- Database & Storage: Supabase
+- Hosting: Netlify
 
-## Local Development
+---
 
-1. Clone the repository
-2. Run `npm install`
-3. Run `npm start`
-4. Open `http://localhost:3000`
+## Project Structure (Brief)
+- `index.html` – Main UI
+- `script.js` – Frontend logic
+- `server.js` – Backend logic
+- `supabase_schema.sql` – Database schema
+- `secure_db.sql` – Security and RLS policies
+- `netlify.toml` – Deployment configuration
 
-## Deployment
+---
 
-This app is optimized for Netlify deployment. See `netlify.toml` for configuration.
+## What I Learned
+- How file uploads work with cloud storage
+- Basics of Supabase Row Level Security
+- Frontend, backend, and database connection flow
+- Structuring and deploying a real web project
 
-## License
+---
 
-Created by Twin Core © 2026 TransferX Inc.
+## Notes
+This project was built mainly for learning purposes.
+UI and security improvements are still in progress.
+
+Feedback and suggestions are welcome 🙂
